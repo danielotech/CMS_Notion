@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GEK - Building a Better Future (High Contrast)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FFFF00",
+                        "hc-bg": "#000000",
+                        "hc-text": "#FFFFFF",
+                        "hc-accent": "#FFFF00",
+                        "hc-border": "#FFFFFF",
+                    },
+                    fontFamily: {
+                        "display": ["Atkinson Hyperlegible", "sans-serif"],
+                        "body": ["Atkinson Hyperlegible", "sans-serif"],
+                        "sans": ["Atkinson Hyperlegible", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0",
+                        "md": "0",
+                        "lg": "0",
+                        "xl": "0",
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Atkinson Hyperlegible', sans-serif;
+            background-color: #000000;
+            color: #FFFFFF;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        :focus-visible {
+            outline: 4px solid #FFFF00;
+            outline-offset: 4px;
+        }
+        .gek-logo-block {
+            background-color: transparent;
+            color: white;
+            padding: 0;
+            font-family: 'Atkinson Hyperlegible', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            line-height: 1;
+            height: 50px;
+            border: 4px solid #FFFFFF;
+            padding: 4px 16px;
+        }
+        .a11y-btn {
+            @apply flex items-center justify-center p-2 border-4 border-white text-white hover:bg-[#FFFF00] hover:text-black transition-colors focus:ring-4 focus:ring-[#FFFF00];
+        }
+        .grid-line {
+            border: 1px solid #FFFFFF;
+        }
+        p, a, span, div {
+            font-weight: 700;}
+        h1, h2, h3, h4, h5 {
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body class="bg-black text-white flex flex-col min-h-screen font-body">
+<header class="sticky top-0 z-50 w-full border-b-4 border-white bg-black">
+<div class="mx-auto max-w-[1440px] px-6 lg:px-12 h-24 flex items-center justify-between">
+<div class="flex items-center">
+<a aria-label="GEK Home" class="flex items-center hover:bg-[#FFFF00] hover:text-black transition-colors p-1" href="#">
+<div class="gek-logo-block">GEK</div>
+</a>
+</div>
+<nav class="hidden xl:flex items-center gap-12">
+<a class="text-xl font-extrabold text-white hover:text-[#FFFF00] underline decoration-4 underline-offset-8 transition-all" href="#">Blog</a>
+<a class="text-xl font-extrabold text-white hover:text-[#FFFF00] underline decoration-4 underline-offset-8 transition-all" href="#">Services</a>
+<a class="text-xl font-extrabold text-[#FFFF00] underline decoration-4 underline-offset-8 transition-all" href="#">Accessibility</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="flex items-center border-4 border-white">
+<button aria-label="Switch to English" class="px-4 py-2 text-lg font-black bg-[#FFFF00] text-black">EN</button>
+<button aria-label="Switch to Spanish" class="px-4 py-2 text-lg font-black text-white hover:bg-[#FFFF00] hover:text-black transition-colors">ES</button>
+</div>
+<div class="hidden sm:flex items-center gap-3 border-l-4 border-white pl-4 ml-2">
+<button aria-label="Toggle High Contrast Mode" class="a11y-btn bg-[#FFFF00] !text-black" title="High Contrast Active">
+<span class="material-symbols-outlined text-[32px] font-black">contrast</span>
+</button>
+<button aria-label="Toggle Dark Mode" class="a11y-btn" title="Dark Mode">
+<span class="material-symbols-outlined text-[32px] font-black">dark_mode</span>
+</button>
+</div>
+<button class="md:hidden p-2 text-white border-4 border-white">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full flex flex-col">
+<section class="relative w-full bg-black min-h-[700px] flex items-center border-b-4 border-white">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black opacity-100"></div>
+</div>
+<div class="relative z-10 mx-auto max-w-[1440px] px-6 lg:px-12 py-24 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-8 flex flex-col gap-8">
+<span class="inline-flex items-center gap-3 px-4 py-2 border-4 border-[#FFFF00] w-fit text-[#FFFF00] text-xl font-black uppercase tracking-widest">
+<span class="w-4 h-4 bg-[#FFFF00]"></span>
+                    Civic Innovation
+                </span>
+<h1 class="text-[#FFFFFF] text-6xl lg:text-8xl font-black leading-tight tracking-tight font-display">
+                    BUILDING A BETTER FUTURE WITH INTEGRITY.
+                </h1>
+<p class="text-[#FFFFFF] text-2xl lg:text-3xl font-bold leading-relaxed max-w-3xl mt-4 border-l-8 border-[#FFFF00] pl-8">
+                    We provide strategic consulting and urban planning solutions designed for the modern world. Committed to excellence and accessibility in every project.
+                </p>
+<div class="mt-12 flex flex-wrap gap-6">
+<button class="inline-flex h-20 items-center justify-center border-4 border-[#FFFF00] bg-[#FFFF00] px-12 text-2xl font-black text-black hover:bg-white hover:border-white transition-all focus:ring-8 focus:ring-white">
+                        GET STARTED
+                    </button>
+<button class="inline-flex h-20 items-center justify-center border-4 border-white bg-transparent px-12 text-2xl font-black text-white hover:bg-white hover:text-black transition-all focus:ring-8 focus:ring-[#FFFF00]">
+                        OUR MISSION
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 lg:py-32 bg-black border-b-4 border-white">
+<div class="mx-auto max-w-[1440px] px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-20 border-b-4 border-white pb-12">
+<div class="max-w-3xl">
+<h2 class="text-[#FFFF00] text-5xl lg:text-6xl font-black tracking-tight mb-6 font-display uppercase">Our Expertise</h2>
+<p class="text-white text-2xl font-bold">Delivering high-impact solutions across key sectors with precision and civic responsibility.</p>
+</div>
+<a class="group inline-flex items-center gap-4 text-2xl font-black text-white hover:text-[#FFFF00] underline decoration-4 underline-offset-8" href="#">
+                    VIEW ALL SERVICES
+                    <span class="material-symbols-outlined text-4xl">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-4 border-white">
+<article class="group relative flex flex-col bg-black border-4 border-white p-10 hover:bg-[#FFFF00] transition-colors">
+<div class="mb-8 inline-flex h-20 w-20 items-center justify-center border-4 border-white bg-black text-white group-hover:border-black group-hover:text-black transition-colors">
+<span class="material-symbols-outlined text-5xl font-black">lightbulb</span>
+</div>
+<h3 class="text-3xl font-black text-white group-hover:text-black mb-6 uppercase">Strategic Consulting</h3>
+<p class="text-white group-hover:text-black text-xl leading-relaxed mb-8 flex-grow">
+                        Data-driven strategies to navigate complex regulatory environments and maximize civic impact.
+                    </p>
+<div class="mt-auto pt-8 border-t-4 border-white group-hover:border-black">
+<span class="text-xl font-black text-white group-hover:text-black uppercase tracking-wider flex items-center gap-3">
+                            Learn More <span class="material-symbols-outlined text-2xl font-black">chevron_right</span>
+</span>
+</div>
+<a aria-label="Learn more about Strategic Consulting" class="absolute inset-0" href="#"></a>
+</article>
+<article class="group relative flex flex-col bg-black border-4 border-white p-10 hover:bg-[#FFFF00] transition-colors">
+<div class="mb-8 inline-flex h-20 w-20 items-center justify-center border-4 border-white bg-black text-white group-hover:border-black group-hover:text-black transition-colors">
+<span class="material-symbols-outlined text-5xl font-black">domain</span>
+</div>
+<h3 class="text-3xl font-black text-white group-hover:text-black mb-6 uppercase">Urban Planning</h3>
+<p class="text-white group-hover:text-black text-xl leading-relaxed mb-8 flex-grow">
+                        Sustainable development plans that prioritize community well-being and long-term infrastructure resilience.
+                    </p>
+<div class="mt-auto pt-8 border-t-4 border-white group-hover:border-black">
+<span class="text-xl font-black text-white group-hover:text-black uppercase tracking-wider flex items-center gap-3">
+                            Learn More <span class="material-symbols-outlined text-2xl font-black">chevron_right</span>
+</span>
+</div>
+<a aria-label="Learn more about Urban Planning" class="absolute inset-0" href="#"></a>
+</article>
+<article class="group relative flex flex-col bg-black border-4 border-white p-10 hover:bg-[#FFFF00] transition-colors">
+<div class="mb-8 inline-flex h-20 w-20 items-center justify-center border-4 border-white bg-black text-white group-hover:border-black group-hover:text-black transition-colors">
+<span class="material-symbols-outlined text-5xl font-black">accessibility_new</span>
+</div>
+<h3 class="text-3xl font-black text-white group-hover:text-black mb-6 uppercase">Digital Accessibility</h3>
+<p class="text-white group-hover:text-black text-xl leading-relaxed mb-8 flex-grow">
+                        Ensuring digital experiences are inclusive, compliant with WCAG 2.2 AAA, and usable by everyone.
+                    </p>
+<div class="mt-auto pt-8 border-t-4 border-white group-hover:border-black">
+<span class="text-xl font-black text-white group-hover:text-black uppercase tracking-wider flex items-center gap-3">
+                            Learn More <span class="material-symbols-outlined text-2xl font-black">chevron_right</span>
+</span>
+</div>
+<a aria-label="Learn more about Digital Accessibility" class="absolute inset-0" href="#"></a>
+</article>
+</div>
+</div>
+</section>
+<section class="py-24 bg-black border-b-4 border-white">
+<div class="mx-auto max-w-[1440px] px-6 lg:px-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-0 border-4 border-white">
+<div class="p-12 border-2 border-white text-center">
+<div class="text-6xl lg:text-8xl font-black text-[#FFFF00] mb-4 font-display">25+</div>
+<div class="text-xl font-black uppercase tracking-widest text-white">Years Experience</div>
+</div>
+<div class="p-12 border-2 border-white text-center">
+<div class="text-6xl lg:text-8xl font-black text-[#FFFF00] mb-4 font-display">500+</div>
+<div class="text-xl font-black uppercase tracking-widest text-white">Projects Completed</div>
+</div>
+<div class="p-12 border-2 border-white text-center">
+<div class="text-6xl lg:text-8xl font-black text-[#FFFF00] mb-4 font-display">100%</div>
+<div class="text-xl font-black uppercase tracking-widest text-white">Compliance Rate</div>
+</div>
+<div class="p-12 border-2 border-white text-center">
+<div class="text-6xl lg:text-8xl font-black text-[#FFFF00] mb-4 font-display">3</div>
+<div class="text-xl font-black uppercase tracking-widest text-white">Global Offices</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 lg:py-32 bg-black border-b-4 border-white">
+<div class="mx-auto max-w-[1440px] px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-16 border-b-4 border-white pb-12">
+<h2 class="text-[#FFFF00] text-5xl lg:text-6xl font-black tracking-tight font-display uppercase">Latest Insights</h2>
+<a class="group inline-flex items-center gap-4 text-2xl font-black text-white hover:text-[#FFFF00] underline decoration-4 underline-offset-8" href="#">
+                    READ THE BLOG
+                    <span class="material-symbols-outlined text-4xl">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div class="group cursor-pointer border-4 border-white p-8 hover:bg-[#FFFF00] transition-colors">
+<div class="border-4 border-white mb-8 aspect-video overflow-hidden">
+<img alt="Modern office interior" class="w-full h-full object-cover grayscale contrast-150 group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNId4dZs5pHT-l-AhJlOtW1PenY72fsn6txhU62gj0iyvQKtlgwW4JlN31HTDgCwgUYe8fV2reg8X_RdndYwSIrmPanN8RjtkdduBVixO-Gfv4DJs9JJxGsnH53bA9RyhEMMidevUbv6442iN-4ST_jDcoOd10_Ec4MUEH9b7QA4Kal8PqoavNYoJH14-52xFFQ1N4YX2iztCWS9wpX64Lvu4HYJQVioAOQszF89Q7fr_HqiC_gn59OlqZa4-31PrCYbgV6-gQlOP-"/>
+</div>
+<div class="flex items-center gap-6 text-xl font-black text-white group-hover:text-black mb-6">
+<span class="text-[#FFFF00] group-hover:text-black uppercase tracking-widest">Urban Design</span>
+<span class="w-2 h-2 bg-white group-hover:bg-black"></span>
+<span>Oct 24, 2023</span>
+</div>
+<h3 class="text-4xl lg:text-5xl font-black text-white group-hover:text-black mb-6 uppercase">
+                        Reimagining Public Spaces for the Post-Digital Era
+                    </h3>
+<p class="text-white group-hover:text-black text-2xl leading-relaxed mb-8">
+                        How we are integrating smart technology into traditional park designs to foster better community engagement.
+                    </p>
+<span class="text-[#FFFF00] group-hover:text-black text-2xl font-black underline decoration-4 underline-offset-8">Read Article</span>
+</div>
+<div class="flex flex-col gap-12">
+<div class="group cursor-pointer flex flex-col sm:flex-row gap-8 items-start border-4 border-white p-6 hover:bg-[#FFFF00] transition-colors">
+<div class="w-full sm:w-56 aspect-[4/3] border-4 border-white overflow-hidden shrink-0">
+<img alt="Business team" class="w-full h-full object-cover grayscale contrast-150 group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB88Td5x0Tj3WXxbgOEavQd7zy8X5Q3ya7k1sNj6PqV5SzIuBHft1xsfktQMqX0EW_A04PZmn1YpcyMLyXUb6_R1zZzh1OukKl_1srbwyVEOCbCPNOCL9mYxnG1Q2ygNYV13NovrvYenD2IzX_mbXUNxmK5IAdZ3iQbo0XLZrzx7PjPpIIG92b9nXvgIXm_Qc18e-4rGF2QAfliMDast5yk79NS8GHEOhTmPhLCX4B-c0v-ORoTCxOxGePxxOnlEv6Rmi5NomDXrBou"/>
+</div>
+<div>
+<div class="text-lg font-black text-[#FFFF00] group-hover:text-black mb-2 uppercase tracking-widest">Consulting • Sep 12</div>
+<h4 class="text-3xl font-black text-white group-hover:text-black mb-4 uppercase">Navigating New Zoning Laws in 2024</h4>
+<p class="text-white group-hover:text-black text-xl leading-relaxed line-clamp-2">Understanding the shift in metropolitan zoning requirements and what it means for new developments.</p>
+</div>
+</div>
+<div class="group cursor-pointer flex flex-col sm:flex-row gap-8 items-start border-4 border-white p-6 hover:bg-[#FFFF00] transition-colors">
+<div class="w-full sm:w-56 aspect-[4/3] border-4 border-white overflow-hidden shrink-0">
+<img alt="Diverse professionals" class="w-full h-full object-cover grayscale contrast-150 group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCntdFocWWx_S4s6Fr0irk5LijTSVJVMbYWq7z56EwuLJRlzhw9p_QLLsq9lYsSw5R48BjGmw7sYzVicqa90r0Rt3R4SANma4KUyJEciQosdyyxedMFSrxvzRkhZJAEizz5nR2YyINFQh9_f1rHtSMvTIind-pM6fBrqBfk5oYYXCC1kAtPYkj8Yxr303StxYiAQmaQXMVudIUCUfdiPr9ji9WvNlSOiCGbt3ITIzq54GjQ7oM25L8UWhtZXXCMr7BPyp5Oll1yhgWV"/>
+</div>
+<div>
+<div class="text-lg font-black text-[#FFFF00] group-hover:text-black mb-2 uppercase tracking-widest">Accessibility • Aug 05</div>
+<h4 class="text-3xl font-black text-white group-hover:text-black mb-4 uppercase">The Importance of Inclusive Design</h4>
+<p class="text-white group-hover:text-black text-xl leading-relaxed line-clamp-2">Why accessibility features are not just a legal requirement but a moral imperative for architecture.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-black border-y-4 border-white">
+<div class="mx-auto max-w-[1440px] px-6 lg:px-12 py-24 lg:py-32">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-16 border-4 border-[#FFFF00] p-12">
+<div class="max-w-4xl">
+<div class="flex items-center gap-6 mb-8 text-[#FFFF00]">
+<span class="material-symbols-outlined text-7xl font-black">accessible</span>
+<h2 class="text-4xl lg:text-6xl font-black tracking-tight text-white uppercase">Committed to Accessibility</h2>
+</div>
+<p class="text-2xl lg:text-3xl text-white leading-relaxed font-bold">
+                        Our digital presence is designed to be inclusive for everyone. We strictly adhere to WCAG 2.2 AAA standards to ensure no one is left behind.
+                    </p>
+</div>
+<div class="flex-shrink-0">
+<button class="flex items-center justify-center border-4 border-[#FFFF00] bg-[#FFFF00] px-12 h-20 text-2xl font-black text-black hover:bg-white hover:border-white transition-colors focus:ring-8 focus:ring-white">
+                        READ STATEMENT
+                    </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-black text-white pt-24 pb-12 border-t-[12px] border-[#FFFF00]">
+<div class="mx-auto max-w-[1440px] px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+<div class="flex flex-col gap-8">
+<a aria-label="GEK Home" class="flex items-center w-fit border-4 border-white px-4 py-2" href="#">
+<div class="text-4xl font-black tracking-tighter">GEK</div>
+</a>
+<p class="text-white text-xl leading-relaxed font-bold">
+                    Strategizing the future of urban environments with integrity, innovation, and inclusivity.
+                </p>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="text-xl font-black uppercase tracking-[0.2em] text-[#FFFF00] mb-2">Company</h5>
+<a class="text-white text-2xl font-bold hover:text-[#FFFF00] underline decoration-2" href="#">About Us</a>
+<a class="text-white text-2xl font-bold hover:text-[#FFFF00] underline decoration-2" href="#">Careers</a>
+<a class="text-white text-2xl font-bold hover:text-[#FFFF00] underline decoration-2" href="#">Newsroom</a>
+<a class="text-white text-2xl font-bold hover:text-[#FFFF00] underline decoration-2" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="text-xl font-black uppercase tracking-[0.2em] text-[#FFFF00] mb-2">Services</h5>
+<a class="text-white text-2xl font-bold hover:text-[#FFFF00] underline decoration-2" href="#">Strategic Consulting</a>
+<a class="text-white text-2xl font-bold hover:text-[#FFFF00] underline decoration-2" href="#">Urban Planning</a>
+<a class="text-white text-2xl font-bold hover:text-[#FFFF00] underline decoration-2" href="#">Accessibility Audits</a>
+<a class="text-white text-2xl font-bold hover:text-[#FFFF00] underline decoration-2" href="#">Sustainability</a>
+</div>
+<div class="flex flex-col gap-8">
+<h5 class="text-xl font-black uppercase tracking-[0.2em] text-[#FFFF00] mb-2">Connect</h5>
+<div class="flex gap-6">
+<a aria-label="Twitter" class="h-16 w-16 flex items-center justify-center border-4 border-white hover:bg-[#FFFF00] hover:text-black transition-colors" href="#">
+<img alt="" class="w-8 h-8 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLn7BdA-vAhY73TV0qEfxPvP_FTfdVYwQU_KWKlyLKUT7mBSHovwB-lLxzFEZwnSuXCiXbCW-thdnanZ5-bA9AUjH-wFESHhEodas-nVxpMzJ15HN5SBW6ebgsS5dUcNTMhOFnr1RMPedrO8Oy839Zo9_n-gWGopBnnDg9hcSSjEXd3vd96Oky30leOFxXYK242eQoZOQgEL0mScnZnbP4f4CGH4qe1-b6QozmPdNt41RYNA1GwHEqj_ANtD-iQ5drxKnWgukqL2v3"/>
+</a>
+<a aria-label="LinkedIn" class="h-16 w-16 flex items-center justify-center border-4 border-white hover:bg-[#FFFF00] hover:text-black transition-colors" href="#">
+<img alt="" class="w-8 h-8 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9cGfTukFHTbD6yWQ3TwGIiD3uzuDHehSvenryBc3YkKwUYKzETQyp0zGUibQ5iFOUneMonY4FW07uTV5ghV2b7n7_iY_mniN8fsjn8HmagZcaVyrBU_FKDF0pp-MRLqCAitPrudRqkprrjffDqcIyJT8RMv5WUj50rqdvk0Y9S_5lRs5-MrjOWP526cU77DpRrvS-pnIaRL7oveF7zl4kaCKo51CxMS5uTiUFP96jOiWVl80-E-e9CziJWtZbyND_LOpDmI3sv0zW"/>
+</a>
+<a aria-label="Instagram" class="h-16 w-16 flex items-center justify-center border-4 border-white hover:bg-[#FFFF00] hover:text-black transition-colors" href="#">
+<img alt="" class="w-8 h-8 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPadNXfyqK7ElSJRs1VEp--APgPKihHTPeb_qJzXrjWOc2aVN4k32-2Oz3ghLKVYdg2VjMu4hR94ANAjM0jWd3Ou3HpkJwdjVOp_-HGLUXH61FslfScGribpsduVq9TlLIh7IXd1sfRPvs-ThxJZc1YH8idqo-mNC_pr4PDpdWv0pjsQbWl1qoK7AQEUipOAsrJkoze6TpZfTdQLdZ0__Y64Wl9W-nLaXLKuNnyqNg9XwRCdSpTimm5Ub6bOhhQ-hGakA6DuscU959"/>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t-4 border-white flex flex-col md:flex-row items-center justify-between gap-8 text-xl font-black">
+<p>© 2024 GEK INC. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-12">
+<a class="hover:text-[#FFFF00] underline decoration-2" href="#">Privacy Policy</a>
+<a class="hover:text-[#FFFF00] underline decoration-2" href="#">Terms of Service</a>
+<a class="hover:text-[#FFFF00] underline decoration-2" href="#">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
