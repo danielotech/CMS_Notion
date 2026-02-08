@@ -199,14 +199,17 @@ button {
   display: none;
 }
 
-@media (min-width: 1280px) {
-  /* xl:flex */
+@media (min-width: 1024px) {
+  /* lg:flex */
   .main-nav {
     display: flex;
     align-items: center;
     gap: 2rem; /* gap-8 */
   }
 }
+
+/* Redundant breakpoint handled by 1024px above, but can keep for specific gap adjustments if needed */
+/* Removed previous 1280px breakpoint for main-nav */
 
 @media (min-width: 1024px) {
   /* lg:gap-12 */
@@ -268,19 +271,34 @@ button {
 }
 
 /* Accessibility Controls */
+/* Base Accessibility Controls - Shared Styles */
 .a11y-controls {
-  display: none;
   align-items: center;
   gap: 0.5rem; /* gap-2 */
+}
+
+/* Header version - Hide on mobile, show from tablet (640px) */
+.site-header .a11y-controls {
+  display: none;
   border-left: 1px solid var(--gray-200);
   padding-left: 0.75rem; /* pl-3 */
   margin-left: 0.25rem; /* ml-1 */
 }
 
 @media (min-width: 640px) {
-  /* sm:flex */
-  .a11y-controls {
+  .site-header .a11y-controls {
     display: flex;
+  }
+}
+
+/* Side Menu version - Show on mobile, hide from tablet (640px) */
+.side-menu .a11y-controls {
+  display: flex;
+}
+
+@media (min-width: 640px) {
+  .side-menu .a11y-controls {
+    display: none;
   }
 }
 
@@ -313,8 +331,8 @@ button {
   margin-left: 0.25rem;
 }
 
-@media (min-width: 768px) {
-  /* md:hidden */
+@media (min-width: 1024px) {
+  /* lg:hidden */
   .menu-btn {
     display: none;
   }
@@ -1639,9 +1657,7 @@ body.menu-open .side-menu {
     color: #000000;
 }
 
-.high-contrast .article-title-sm {
-    color: #FFFFFF;
-}
+/* End of High Contrast Section */
 
 .high-contrast .btn:focus-visible,
 .high-contrast .a11y-btn:focus-visible,
