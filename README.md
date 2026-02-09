@@ -21,3 +21,6 @@ This is a Content Management System integrated with Notion.
 | Primary Color | Deep GEK Blue | `#003566` | Meets AAA on light background; sober and serious. |
 | Accent Color | "Empire State" Gold | `#C5A059` | Adds the "elegant" and premium touch. |
 
+
+# API notion
+[https://developers.notion.com/reference/query-a-data-source]
